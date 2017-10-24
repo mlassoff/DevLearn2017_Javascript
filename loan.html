@@ -1,0 +1,18 @@
+<script>
+	var principal = Number(prompt("Principal: "));
+	var rate = Number(prompt("APR: "));
+	var term = Number(prompt("Term (Months): "));
+	
+	var monthNumber = 1;
+	
+	while(monthNumber < term)
+	{
+		var interestAmount = principal * (rate/12);
+		principal = principal + interestAmount;
+		alert(monthNumber + ": " + principal)
+		monthNumber++;
+	}
+	
+	alert(principal);
+	
+</script>

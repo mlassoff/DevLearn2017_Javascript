@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Forceast</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+    </head>
+    <body>
+        <div data-role="page"> 
+	       <div data-role="header"><h1>Weather Conditions</h1></div> 
+	       <div data-role="content" id="content">
+			<input type="text" placeholder="Zip Code" id="zip" />
+			  <button id="btnWeather">Get Conditions</button>
+			</div> 
+	       <div data-role="footer">LearnToProgram.tv, LLC 2017</div> 
+        </div> 
+    </body>
+</html>
+<script>
+		var weatherButton = document.getElementById('btnWeather');
+		weatherButton.addEventListener('click', getData);
+	
+		function getData()
+		{
+			var url = "http://api.wunderground.com/api/df813c985b3d8af6/geolookup/conditions/q/";
+			url += document.getElementById('zip').value;
+			url += ".json";
+			console.log(url);
+			$.getJSON(url, function(result)
+				{
+					//console.log(result);
+					/*
+						location.city
+						current_observation.temp_f
+						current_observation.weather
+						current_observation.wind_string
+					*/
+					var out = "<h1>" + result.location.city + "</h1>";
+					out += "<p><strong>Temperature: " + result.current_observation.temp_f;
+					out += "<br/>" + result.current_observation.weather;
+					out += "<br/>" + result.current_observation.wind_string;
+					document.getElementById('content').innerHTML = out;
+					
+					
+				}
+					 
+					 )
+		}
+</script>
+
+/* https://github.com/mlassoff/Weather-2017  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

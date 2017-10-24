@@ -1,0 +1,40 @@
+<video id="myVideo">
+	<source src="star_trails.mp4" />
+</video><br/>
+<button id="btnPlay">Play</button>
+<button id="btnPause">Pause</button>
+<button id="btnStop">Stop</button>
+
+<script>
+	var movie = document.getElementById('myVideo');
+	var playButton = document.getElementById('btnPlay');
+	var pauseButton = document.getElementById('btnPause');
+	var stopButton = document.getElementById('btnStop');
+	
+	playButton.addEventListener("click", playMovie);
+	pauseButton.addEventListener("click", pauseMovie);
+	stopButton.addEventListener("click", stopMovie);
+	
+	function stopMovie(e)
+	{
+		movie.pause();
+		movie.currentTime = 0;
+	}
+	
+	function playMovie(e)
+	{
+		movie.play();
+	}
+	
+	function pauseMovie(e)
+	{
+		movie.pause();
+	}
+	
+	
+</script>
+
+
+
+
+

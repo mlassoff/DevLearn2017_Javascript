@@ -1,0 +1,6 @@
+==	Equivilent
+===	Equivilent value and type
+>	Greater than
+<	Less than
+>= 	Greater than or =
+<=	Less than or =

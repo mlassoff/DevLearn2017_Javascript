@@ -1,0 +1,34 @@
+<div id="question">
+	<p>What band went 20 years between number 1 Billboard hits?</p>
+</div>
+<div id="answers">
+	<p>A. The Beatles</p>
+	<p>B. The Rolling Stones</p>
+	<p>C. The Kidney Stones</p>
+	<p>D. Slaughter</p>
+	<p>E. The Moody Blues</p>
+	<p>F. Scandal</p>
+</div>
+<button id="btnHint">HINT!</button>
+<div id="hint" style="display: none;">
+	<p>The drummer of the correct band is named Graham Edge</p>
+</div>
+
+<script>
+	var hintButton = document.getElementById('btnHint');
+	hintButton.addEventListener('mouseover', hint);
+	hintButton.addEventListener('mouseout', hintDisappear)
+	function hint(e)
+	{
+		document.getElementById('hint').style.display="block";
+	}
+	
+	function hintDisappear(e)
+	{
+		document.getElementById('hint').style.display="none";
+	}
+</script>
+
+
+
+

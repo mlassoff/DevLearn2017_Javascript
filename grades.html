@@ -1,0 +1,25 @@
+<script>
+	var testScore = prompt("What is the test Score?");
+	var letterGrade = "";
+	if(testScore < 60)
+	{ 
+		letterGrade = "F";
+	} else
+	if(testScore < 70)
+	{
+		letterGrade = "D";
+	} else
+	if(testScore < 80)
+	{
+		letterGrade = "C";
+	} else
+	if(testScore < 90)
+	{
+		letterGrade = "B";
+	} else
+	{
+		letterGrade= "A";
+	}
+	alert("Your grade is a " + letterGrade);
+
+</script>

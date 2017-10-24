@@ -1,0 +1,17 @@
+<div id="box" style="height: 200px; width: 200px; background-color: blue;"></div>
+<output id="xbox"></output> <output id="ybox"></output>
+<script>
+	var box = document.getElementById('box');
+	box.addEventListener('click', boxInteract);
+	
+	function boxInteract(e)
+	{
+		console.log(e);
+		document.getElementById('xbox').innerHTML = e.clientX;
+		document.getElementById('ybox').innerHTML = e.clientY;
+		if(e.shiftKey==true)
+		{
+			box.style.backgroundColor = "red";
+		}
+	}
+</script>
